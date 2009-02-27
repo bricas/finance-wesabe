@@ -45,17 +45,17 @@ has parent => ( is => 'ro', isa => 'Object' );
 
 =item * guid
 
-=item * txaction-count
+=item * txaction_count
 
-=item * account-type
+=item * account_type
 
-=item * account-number
+=item * account_number
 
-=item * newest-txaction - A DateTime object
+=item * newest_txaction - A DateTime object
 
-=item * oldest-txaction - A DateTime object
+=item * oldest_txaction - A DateTime object
 
-=item * last-uploaded-at - A DateTime object
+=item * last_uploaded_at - A DateTime object
 
 =item * balance
 

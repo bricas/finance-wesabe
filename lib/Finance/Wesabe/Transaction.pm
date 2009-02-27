@@ -37,19 +37,19 @@ has parent => ( is => 'ro', isa => 'Object' );
 
 =over 4
 
-=item * raw-name
+=item * raw_name
 
 =item * guid
 
 =item * memo
 
-=item * raw-txntype
+=item * raw_txntype
 
 =item * amount
 
 =item * date - A DateTime object
 
-=item * original-date - A DateTime object
+=item * original_date - A DateTime object
 
 =back
 

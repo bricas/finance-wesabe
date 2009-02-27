@@ -7,6 +7,7 @@ use LWP::UserAgent;
 use XML::Simple ();
 
 use Finance::Wesabe::Account;
+use Finance::Wesabe::Profile;
 
 our $VERSION = '0.01';
 our $API_VERSION = '1.0.0';
@@ -87,6 +88,18 @@ sub account {
     my( $self, $id ) = @_;
     my $xml = $self->_get_req( "/accounts/${id}.xml" );
     return Finance::Wesabe::Account->new( content => $xml, parent => $self );
+}
+
+=head2 profile( )
+
+Returns a L<Finance::Wesabe::Profile> with your profile information.
+
+=cut
+
+sub profile {
+    my( $self ) = @_;
+    my $xml = $self->_get_req( "/profile.xml" );
+    return Finance::Wesabe::Profile->new( content => $xml, parent => $self );
 }
 
 sub _get_req {
