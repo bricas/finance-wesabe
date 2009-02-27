@@ -9,7 +9,7 @@ use XML::Simple ();
 use Finance::Wesabe::Account;
 use Finance::Wesabe::Profile;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 our $API_VERSION = '1.0.0';
 
 my $agent_name = __PACKAGE__ . "/$VERSION Wesabe-API/$API_VERSION"; 
