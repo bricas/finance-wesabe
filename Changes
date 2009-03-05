@@ -3,6 +3,8 @@ Revision history for Perl extension Finance::Wesabe.
 0.02  XXX
     - pod fixes
     - added Profile class
+    - added note field to Transaction.pm
+    - added is_transfer() method to Transaction.pm
 
 0.01  Thu Feb 26 2009
     - original version

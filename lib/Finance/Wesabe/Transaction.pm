@@ -43,6 +43,8 @@ has parent => ( is => 'ro', isa => 'Object' );
 
 =item * memo
 
+=item * note
+
 =item * raw_txntype
 
 =item * amount
@@ -55,7 +57,7 @@ has parent => ( is => 'ro', isa => 'Object' );
 
 =cut
 
-__PACKAGE__->mk_simple_field( qw( memo raw-name guid raw-txntype ) );
+__PACKAGE__->mk_simple_field( qw( memo raw-name guid raw-txntype note ) );
 __PACKAGE__->mk_deep_field( qw( amount ) );
 __PACKAGE__->mk_simple_date_field( qw( date original-date ) );
 
@@ -85,6 +87,16 @@ sub tags {
     my $tags = $self->content->{ tags }->{ tag };
     return $tags->{ name } unless ref $tags eq 'ARRAY';
     return map { $_->{ name } } @$tags;
+}
+
+=head2 is_transfer( )
+
+Returns a boolean indicating if this transaction is a transfer.
+
+=cut
+
+sub is_transfer {
+    return exists shift->content->{ transfer };
 }
 
 no Moose;
