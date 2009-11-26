@@ -1,4 +1,4 @@
-use inc::Module::Install 0.77;
+use inc::Module::Install 0.91;
 
 if ( -e 'MANIFEST.SKIP' ) {
     system( 'pod2text lib/Finance/Wesabe.pm > README' );
@@ -18,5 +18,7 @@ requires 'DateTime::Format::ISO8601';
 test_requires 'Test::More';
 
 extra_tests;
+
+repository "http://github.com/bricas/finance-wesabe/tree/master";
 
 WriteAll;
