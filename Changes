@@ -1,6 +1,8 @@
 Revision history for Perl extension Finance::Wesabe.
 
-0.02  XXX
+0.02  Fri Aug 20 2010
+    - add a note regarding shutdown of wesabe.com and
+      open source "mesabe"
     - pod fixes
     - added Profile class
     - added note field to Transaction.pm

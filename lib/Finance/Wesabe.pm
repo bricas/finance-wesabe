@@ -34,6 +34,26 @@ Finance::Wesabe - Access your wesabe.com account information
 This module provides access to your basic account info via the wesabe
 API. It currently supports a subset of the 1.0.0 API.
 
+=head1 WESABE.COM SHUTDOWN / OPEN SOURCE "MESABE"
+
+On July 31st, 2010, the websabe.com service shut its doors. Subsequently,
+parts of the application have been release as open source code on the websabe
+github account (L<http://www.github.com/wesabe>).
+
+Of particular interest are the instructions to get a local copy of the wesabe
+web app running locally (known as "mesabe"): L<http://github.com/wesabe/mesabe/wiki>.
+
+At the time of this writing, it is unclear if this module will interface
+with a locally run version of the app, however, the base URL is configurable
+as follows:
+
+    my $w = Finance::Wesabe->new( {
+        url      => 'http://localhost:3000/', # change as required
+        username => $u,
+        password => $p,
+    } );
+    
+
 =head1 ACCESSORS
 
 =over 4
@@ -126,7 +146,7 @@ __PACKAGE__->meta->make_immutable;
 
 =item * L<http://www.wesabe.com>
 
-=item * L<https://www.wesabe.com/page/api>
+=item * L<http://github.com/wesabe/mesabe/wiki>
 
 =back
 
@@ -136,7 +156,7 @@ Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2009 by Brian Cassidy
+Copyright 2009-2010 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
