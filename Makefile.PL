@@ -1,4 +1,4 @@
-use inc::Module::Install 0.91;
+use inc::Module::Install 0.99;
 
 if ( -e 'MANIFEST.SKIP' ) {
     system( 'pod2text lib/Finance/Wesabe.pm > README' );
@@ -19,6 +19,6 @@ test_requires 'Test::More';
 
 extra_tests;
 
-repository "http://github.com/bricas/finance-wesabe/tree/master";
+repository "http://github.com/bricas/finance-wesabe/";
 
 WriteAll;
