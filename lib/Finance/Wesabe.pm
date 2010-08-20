@@ -36,8 +36,8 @@ API. It currently supports a subset of the 1.0.0 API.
 
 =head1 WESABE.COM SHUTDOWN / OPEN SOURCE "MESABE"
 
-On July 31st, 2010, the websabe.com service shut its doors. Subsequently,
-parts of the application have been release as open source code on the websabe
+On July 31st, 2010, the wesabe.com service shut its doors. Subsequently,
+parts of the application have been release as open source code on the wesabe
 github account (L<http://www.github.com/wesabe>).
 
 Of particular interest are the instructions to get a local copy of the wesabe
